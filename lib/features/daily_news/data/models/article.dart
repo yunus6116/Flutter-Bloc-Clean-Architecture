@@ -1,3 +1,4 @@
+import 'package:flutter_bloc_clean_architecture/core/constants/constants.dart';
 import 'package:flutter_bloc_clean_architecture/features/daily_news/domain/entities/article.dart';
 
 class ArticleModel extends ArticleEntity {
@@ -27,7 +28,7 @@ class ArticleModel extends ArticleEntity {
       title: map['title'] ?? "",
       description: map['description'] ?? "",
       url: map['url'] ?? "",
-      urlToImage: map['urlToImage'] ?? "",
+      urlToImage: map['urlToImage'] != null && map['urlToImage'] != "" ? map['urlToImage'] : kDefaultImage,
       publishedAt: map['publishedAt'] ?? "",
       content: map['content'] ?? "",
     );

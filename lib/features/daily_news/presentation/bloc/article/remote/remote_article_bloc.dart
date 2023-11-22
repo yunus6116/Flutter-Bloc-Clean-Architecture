@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc_clean_architecture/core/resources/data_state.dart';
 import 'package:flutter_bloc_clean_architecture/features/daily_news/domain/usecases/get_article.dart';
 
@@ -19,6 +20,7 @@ class RemoteArticlesBloc extends Bloc<RemoteArticlesEvent, RemoteArticlesState> 
     }
 
     if (dataState is DataFailed) {
+      debugPrint(dataState.error.toString());
       emit(RemoteArticlesError(error: dataState.error!));
     }
   }

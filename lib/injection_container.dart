@@ -14,7 +14,7 @@ Future<void> initializeDependencies() async {
   sl.registerSingleton<Dio>(Dio());
 
   // Data sources
-  sl.registerSingleton<NewsApiService>(sl());
+  sl.registerSingleton<NewsApiService>(NewsApiService(sl()));
 
   // Repository
   sl.registerLazySingleton<ArticleRepository>(() => ArticeRepositoryImpl(sl()));
