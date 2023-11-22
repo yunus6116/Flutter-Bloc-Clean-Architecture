@@ -1,0 +1,63 @@
+name: flutter_bloc_clean_architecture
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+
+  # state management
+  flutter_bloc: ^8.1.3
+
+  #Database
+  floor: ^1.4.2
+
+  # routing
+  auto_route: ^7.8.4
+
+  #networking
+  retrofit: ^4.0.3
+  dio: ^5.3.3
+
+  #comparing dart objects
+  equatable: ^2.0.5
+
+  #service locater
+  get_it: ^7.6.4
+
+  #core
+  cached_network_image: ^3.3.0
+  intl: ^0.18.1
+  flutter_hooks: ^0.20.3
+  
+  #ui
+  shimmer: ^3.0.0
+  flutter_svg: ^2.0.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  floor_generator: ^1.4.2
+  retrofit_generator: ^8.0.4
+  build_runner: ^2.4.6
+
+  # rules and activating additional ones.
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  fonts:
+    - family: Muli
+      fonts:
+        - asset: assets/fonts/muli/Muli.ttf
+        - asset: assets/fonts/muli/Muli-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/muli/Muli-Light.ttf
+          weight: 300
