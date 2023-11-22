@@ -1,6 +1,8 @@
+import 'package:floor/floor.dart';
 import 'package:flutter_bloc_clean_architecture/core/constants/constants.dart';
 import 'package:flutter_bloc_clean_architecture/features/daily_news/domain/entities/article.dart';
 
+@Entity(tableName: 'articles', primaryKeys: ['id'])
 class ArticleModel extends ArticleEntity {
   const ArticleModel({
     int? id,
@@ -32,5 +34,17 @@ class ArticleModel extends ArticleEntity {
       publishedAt: map['publishedAt'] ?? "",
       content: map['content'] ?? "",
     );
+  }
+
+  factory ArticleModel.fromEntity(ArticleEntity entity) {
+    return ArticleModel(
+        id: entity.id,
+        author: entity.author,
+        title: entity.title,
+        description: entity.description,
+        url: entity.url,
+        urlToImage: entity.urlToImage,
+        publishedAt: entity.publishedAt,
+        content: entity.content);
   }
 }
