@@ -36,3 +36,29 @@ The app uses the Floor library to interact with a local SQLite database. News ar
 
    ```bash
    git clone https://github.com/yunus6116/Flutter-Bloc-Clean-Architecture.git
+
+2. Navigate to the project directory:
+    ```bash
+    cd your-repo
+3. Add your News API key:
+   <br>
+   Open the lib/core/constants/constants.dart file and locate the newsAPIKey variable. Replace 'your_api_key_here' with your actual News API key. If you don't have an API key, you can obtain one by signing up on the News API website.
+   <br>
+   <br>
+   // lib/core/constants/constants.dart
+   <br>
+   const String newsAPIKey = 'your_actual_api_key';
+   <br>
+   <br>
+   Note: Keep your API key secure and do not share it publicly. Consider using environment variables or other secure methods to manage sensitive information in a production environment.
+
+5. Install dependencies:
+   
+   ```bash
+   flutter pub get
+
+6. Run the app:
+   
+   ```bash
+   flutter run
+   
