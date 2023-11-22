@@ -6,6 +6,7 @@ import 'package:flutter_bloc_clean_architecture/features/daily_news/domain/useca
 import 'package:flutter_bloc_clean_architecture/features/daily_news/domain/usecases/get_saved_article.dart';
 import 'package:flutter_bloc_clean_architecture/features/daily_news/domain/usecases/remove_article.dart';
 import 'package:flutter_bloc_clean_architecture/features/daily_news/domain/usecases/save_article.dart';
+import 'package:flutter_bloc_clean_architecture/features/daily_news/presentation/bloc/article/local/local_article_bloc.dart';
 import 'package:flutter_bloc_clean_architecture/features/daily_news/presentation/bloc/article/remote/remote_article_bloc.dart';
 import 'package:get_it/get_it.dart';
 
@@ -34,6 +35,8 @@ Future<void> initializeDependencies() async {
 
   sl.registerLazySingleton(() => RemoveArticleUseCase(sl()));
 
-  // Bloc
+  // Blocs
   sl.registerFactory(() => RemoteArticlesBloc(sl()));
+
+  sl.registerFactory<LocalArticleBloc>(() => LocalArticleBloc(sl(), sl(), sl()));
 }
